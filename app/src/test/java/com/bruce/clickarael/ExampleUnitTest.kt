@@ -1,4 +1,4 @@
-package com.bruce.toucharael
+package com.bruce.clickarael
 
 import org.junit.Test
 

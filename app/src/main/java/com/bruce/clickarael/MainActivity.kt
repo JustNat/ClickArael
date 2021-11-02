@@ -1,9 +1,9 @@
-package com.bruce.toucharael
+package com.bruce.clickarael
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.bruce.toucharael.databinding.ActivityMainBinding
+import com.bruce.clickarael.databinding.ActivityMainBinding
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
