@@ -3,12 +3,10 @@ package com.bruce.toucharael
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import com.bruce.toucharael.databinding.ActivityMainBinding
+import kotlin.random.Random
 
- class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
      private lateinit var binding: ActivityMainBinding
 
@@ -18,25 +16,46 @@ import com.bruce.toucharael.databinding.ActivityMainBinding
          binding = ActivityMainBinding.inflate(layoutInflater)
          setContentView(binding.root)
 
-         WindowCompat.setDecorFitsSystemWindows(window, false)
-         WindowInsetsControllerCompat(window, binding.root).let { controller ->
-             controller.hide(WindowInsetsCompat.Type.systemBars())
-             controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-         }
-
          insertListeners()
      }
 
      private fun insertListeners() {
          binding.mainImage.setOnClickListener {
-             fun hideClick() {
-                 binding.clickTv.visibility = View.INVISIBLE
-             }
-             hideClick()
-             binding.aulixiaryTv.text = "dafuki velho?"
+             binding.clickTv.visibility = View.GONE
+             val random = Random.nextInt(9)
+             val stringArray = resources.getStringArray(R.array.strings_random)
+             when {
+                 (random == 0) -> {
+                     binding.auxiliaryTv.text = stringArray[0]
+                 }
+                 (random == 1) -> {
+                     binding.auxiliaryTv.text = stringArray[1]
+                 }
+                 (random == 2) -> {
+                     binding.auxiliaryTv.text = stringArray[2]
+                 }
+                 (random == 3) -> {
+                     binding.auxiliaryTv.text = stringArray[3]
+                 }
+                 (random == 4) -> {
+                     binding.auxiliaryTv.text = stringArray[4]
+                 }
+                 (random == 5) -> {
+                     binding.auxiliaryTv.text = stringArray[5]
+                 }
+                 (random == 6) -> {
+                     binding.auxiliaryTv.text = stringArray[6]
+                 }
+                 (random == 7) -> {
+                     binding.auxiliaryTv.text = stringArray[7]
+                 }
+                 (random == 8) -> {
+                     binding.auxiliaryTv.text = stringArray[8]
+                 }
              }
          }
      }
+}
 
 
 

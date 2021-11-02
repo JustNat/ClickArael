@@ -3,4 +3,17 @@
     <string name="hello_world">Olá mundo</string>
     <string name="click_arael">Clique no Arael</string>
     <string name="click_on_arael">Clique em Arael</string>
+
+    <string-array name="strings_random">
+        <item>inove meu mag</item>
+        <item>-p yerterdau</item>
+        <item>todo preto todo all black</item>
+        <item>eai ninja</item>
+        <item>-p bell marques as melhores</item>
+        <item>cala boca que tu tambem é um bot arrombado do carai</item>
+        <item>auto ban</item>
+        <item>dafuck veio</item>
+        <item>vai te lascar gg</item>
+    </string-array>
+
 </resources>
