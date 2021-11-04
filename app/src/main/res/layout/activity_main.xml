@@ -7,17 +7,36 @@
     app:circularflow_radiusInDP="30"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/main_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/click_arael"
-        android:src="@drawable/arael"
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:id="@+id/circular_card"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/main_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/click_on_arael"
+                android:src="@drawable/arael"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/click_tv"
@@ -28,14 +47,6 @@
         android:text="@string/click_on_arael"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_image" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/auxiliary_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_image" />
+        app:layout_constraintTop_toBottomOf="@id/circular_card" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
